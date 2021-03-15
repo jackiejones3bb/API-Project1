@@ -1,0 +1,83 @@
+<!DOCTYPE html style="height:100%;">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Random Pokemon Picker</title>
+  </head>
+  <body style="height: 100%;">
+    <!-- <h1>Random Pokemon Picker</h1>
+    <img src="" class='random-image'>
+    <h2 id="pokemonName" ></h2>=""
+    <ul>
+    </ul> -->
+
+    <div
+      class="container-fluid h-100 d-flex flex-column"
+      style="
+        background-image: url(./img/background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <h1>Random Pokemon Picker</h1>
+      <div class="row flex-grow-1">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 my-auto">
+          <div
+            class="card h-80 bg-light"
+            id="card1"
+            style="border: 13px solid #f8f897"
+          >
+            <div
+              class="card-header pokemonName font-weight-bold text-capitalize border-white border-top border-right border-left border rounded-top"
+              
+            ></div>
+            <img src="" class="card-img-top bg-white random-image" />
+            <div class="card-body bg-light text-dark border-white">
+              <h2 class="card-title pokemonName"></h2>
+              <div class="mb-4 font-weight-bold font-italic">Abilities</div>
+              <ul></ul>
+            </div>
+          </div>
+          <h1 id="card1-battle-result" style="z-index: 50; position: relative;"></h1>
+        </div>
+        <div class="col d-flex align-items-center justify-content-md-center">
+          <div>
+            <button id="btnDrawCards" type="button" class="btn btn-primary">
+              Draw Cards
+            </button>
+            <button id="btnBattle" type="button" class="btn btn-danger ml-3">
+              BATTLE!
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3 my-auto">
+          <div
+            class="card h-80 bg-light"
+            id="card2"
+            style="border: 13px solid #f8f897"
+          >
+            <div
+              class="card-header pokemonName font-weight-bold text-capitalize border-white border rounded-top"
+            ></div>
+            <img src="" class="card-img-top bg-white random-image" />
+            <div class="card-body bg-light text-dark border-white">
+              <h2 class="card-title pokemonName"></h2>
+              <div class="mb-4 font-weight-bold font-italic">Abilities</div>
+              <ul></ul>
+            </div>
+          </div>
+          <h1 id="card2-battle-result" style="z-index: 50; position: relative;"></h1>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </body>
+  <script src="random-pokemon.js"></script>
+</html>
