@@ -1,5 +1,7 @@
 const card1 = document.getElementById('card1')
 const card2 = document.getElementById('card2')
+const cardWinner1 = document.getElementById('card1-winner')
+const cardWinner2 = document.getElementById('card2-winner')
 
 card1.style.display = "none"
 card2.style.display = "none"
@@ -48,14 +50,12 @@ while (abilitiesList.firstChild) {
 
 }
 
-const card1Result = document.getElementById('card1-battle-result')
-const card2Result = document.getElementById('card2-battle-result')
 const drawCardsBtn=document.getElementById('btnDrawCards')
 drawCardsBtn.addEventListener('click', () => {
+    cardWinner1.style.display = "none"
+    cardWinner2.style.display = "none"
     card1.style.display = "block"
     card2.style.display = "block"
-    card2Result.innerText=''
-    card1Result.innerText=''
     getPokemon('card1'); 
     getPokemon('card2'); 
 })
@@ -65,12 +65,9 @@ battleBtn.addEventListener('click', () => {
 
     const randomNumber = Math.round(Math.random() * 2);
     if(randomNumber % 2 == 0){
-        card2Result.innerText='WINNER!'
-        card1Result.innerText='loser :('
+        cardWinner2.style.display = ""
     }
     else {
-        card1Result.innerText='WINNER!'
-        card2Result.innerText='loser :('
-
+        cardWinner1.style.display = ""
     }
 })
